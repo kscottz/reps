@@ -36,6 +36,21 @@ script_includes:
           {% include datetime.html date=page.last_modified_at tooltip=true lang=lang %}
         </span>
       {% endif %}
+
+      {% assign type_url = page.category | slugify | url_encode | prepend: '/categories/' | append: '/' %}
+      <span>
+        Type:
+        <a class="post-tag btn btn-outline-primary" href="{{ categories_url | relative_url }}"
+          ><i class="fas fa-folder-open fa-fw"></i> {{ page.category -}}
+        </a>
+      </span>
+      {% assign tag_url = page.tag | slugify | url_encode | prepend: '/tags/' | append: '/' %}
+      <span>
+        Status:
+        <a class="post-tag btn btn-outline-primary" href="{{ tag_url | relative_url }}"
+          ><i class="fas fa-gears fa-fw"></i> {{ page.tag -}}
+        </a>
+      </span>
       <span>
         <a href="https://www.github.com/{{ site.github.username }}/{{ site.github.repo }}/blob/main/{{ page.path }}">
           View REP Source</a
