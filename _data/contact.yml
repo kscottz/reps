@@ -11,9 +11,13 @@
   icon: "fas fa-rss"
   noblank: true
 
+- type: Github
+  icon: "fab fa-github"
+  link: "https://github.com/openrobotics/reps"
+
 - type: mastodon
   icon: 'fab fa-mastodon'   # icons powered by <https://fontawesome.com/>
-  url:  'https://mastodon.online/@openrobotics'
+  url:  'https://fosstodon.org/@openrobotics'
 
 - type: linkedin
   icon: 'fab fa-linkedin'   # icons powered by <https://fontawesome.com/>
